@@ -1,4 +1,4 @@
-package pt12.ex5;
+package ex5;
 
 class UserInterface {
     private OracleDatabase oracleDatabase;

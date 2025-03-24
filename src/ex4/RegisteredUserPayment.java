@@ -1,4 +1,4 @@
-package pt12.ex4;
+package ex4;
 
 class RegisteredUserPayment implements Payment {
     String name;

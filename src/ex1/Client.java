@@ -1,10 +1,14 @@
-package pt12.ex1;
+package ex1;
+
+import static ex1.DetailShower.showEmpDetail;
 
 class Client {
  
     public static void main(String[] args) {
-
         Employee robin = new Employee("Robin", "Smith", 7.5);
+        Displayer displayer = new Displayer();
+        Generator generator = new Generator();
+        SeniorityChecker seniorityChecker = new SeniorityChecker();
         showEmpDetail(robin);
 
         System.out.println("\n*******\n");
@@ -12,14 +16,6 @@ class Client {
         Employee kevin = new Employee("Kevin", "Proctor", 3.2);
         showEmpDetail(kevin);
 
-    }
-
-    private static void showEmpDetail(Employee emp) {
-        emp.displayEmpDetail();
-        System.out.println("The employee id: " + emp.generateEmpId(emp.firstName));
-        System.out.println("This employee is a " +
-                emp.checkSeniority(emp.experienceInYears) +
-                " employee.");
     }
 
 }

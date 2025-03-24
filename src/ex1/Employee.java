@@ -1,6 +1,4 @@
-package pt12.ex1;
-
-import java.util.Random;
+package ex1;
 
 class Employee {
     public String firstName, lastName, empId;
@@ -12,19 +10,36 @@ class Employee {
         this.experienceInYears = experience;
     }
 
-    public void displayEmpDetail() {
-        System.out.println("The employee name: " + lastName + "," + firstName);
-        System.out.println("This employee has " + experienceInYears + " years of experience.");
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String checkSeniority(double experienceInYears) {
-        return experienceInYears > 5 ? "senior" : "junior";
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String generateEmpId(String empFirstName) {
-        int random = new Random().nextInt(1000);
-        empId = empFirstName.substring(0, 1) + random;
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmpId() {
         return empId;
+    }
+
+    public void setEmpId(String empId) {
+        this.empId = empId;
+    }
+
+    public double getExperienceInYears() {
+        return experienceInYears;
+    }
+
+    public void setExperienceInYears(double experienceInYears) {
+        this.experienceInYears = experienceInYears;
     }
 }
 

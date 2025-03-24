@@ -1,4 +1,4 @@
-package pt12.ex2;
+package ex2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,24 +15,24 @@ class Client {
         }
 
         System.out.println("===Distinctions:===");
-        DistinctionDecider distinctionDecider = new DistinctionDecider();
+//        DistinctionDecider distinctionDecider = new DistinctionDecider();
         // Evaluate distinctions.          
         for (Student student : enrolledStudents) {
-            distinctionDecider.evaluateDistinction(student);
+//            distinctionDecider.evaluateDistinction(student);
         }
     }
 
     private static List<Student> enrollStudents() {
-        Student sam = new Student("Sam", "R1", 81.5, "Comp.Sc.");
-        Student bob = new Student("Bob", "R2", 72, "Physics");
-        Student john = new Student("John", "R3", 71, "History");
-        Student kate = new Student("Kate", "R4", 66.5, "English");
+//        Student sam = new Student("Sam", "R1", 81.5, "Comp..");
+        Student bob = new ScienceStudent("Bob", "R2", 72, "Physics");
+        Student john = new ArtStudent("John", "R3", 71, "History");
+//        Student kate = new Student("Kate", "R4", 66.5, "English");
 
         List<Student> students = new ArrayList<Student>();
-        students.add(sam);
+//        students.add(sam);
         students.add(bob);
         students.add(john);
-        students.add(kate);
+//        students.add(kate);
         return students;
     }
 }

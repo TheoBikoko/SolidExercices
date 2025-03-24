@@ -1,4 +1,4 @@
-package pt12.ex3;
+package ex3;
 
 interface Printer {
 

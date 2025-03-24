@@ -1,4 +1,4 @@
-package pt12.ex4;
+package ex4;
 
 interface Payment {
 

@@ -1,16 +1,47 @@
-package pt12.ex2;
+package ex2;
 
-class Student {
+public class Student {
     String name;
     String regNumber;
     String department;
     double score;
 
-    public Student(String name, String regNumber, double score, String dept) {
+    public Student(String name, String regNumber, double score) {
         this.name = name;
         this.regNumber = regNumber;
         this.score = score;
-        this.department = dept;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRegNumber() {
+        return regNumber;
+    }
+
+    public void setRegNumber(String regNumber) {
+        this.regNumber = regNumber;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public double getScore() {
+        return score;
+    }
+
+    public void setScore(double score) {
+        this.score = score;
     }
 
     @Override
