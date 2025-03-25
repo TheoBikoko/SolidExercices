@@ -4,27 +4,43 @@ package ex3;
 // import java.util.List;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 class Client {
 
     public static void main(String[] args) {
-        Printer printer = new AdvancedPrinter();
-        printer.printDocument();
-        printer.sendFax();
+        Printable printer = new AdvancedPrinter();
+        Printable printer2 = new BasicPrinter();
 
-        printer = new BasicPrinter();
-        printer.printDocument();
-        // printer.sendFax();//Will throw error
+        Faxable fax = new LanFax();
+        Faxable fax2 = new EFax();
 
-        /*
-         * List<Printer> printers = new ArrayList<Printer>(); printers.add(new
-         * AdvancedPrinter()); printers.add(new BasicPrinter());
-         *
-         * for (Printer device : printers) { device.printDocument(); //
-         * device.sendFax(); // Will throw error } //
-         * printers.forEach(Printer::printDocument);//ok
-         *
-         */
+        List<Printable> printers = new ArrayList<>();
+        printers.add(printer);
+        printers.add(printer2);
+
+        for (Printable device : printers) {
+            device.printDocument();
+
+            if (device instanceof AdvancedPrinter) {
+                ((AdvancedPrinter) device).sendFax();
+            }
+        }
+
+        List<Faxable> faxes = new ArrayList<>();
+        faxes.add(fax);
+        faxes.add(fax2);
+
+        for (Faxable device : faxes) {
+            device.faxType();
+            if (device instanceof LanFax) {
+                ((LanFax) device).sendFax();
+            }
+            else if(device instanceof EFax) {
+                ((EFax) device).sendFax();
+            }
+        }
 
     }
-
 }

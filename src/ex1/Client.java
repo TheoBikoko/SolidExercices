@@ -1,6 +1,6 @@
 package ex1;
 
-import static ex1.DetailShower.showEmpDetail;
+//import static ex1.DetailShower.showEmpDetail;
 
 class Client {
  
@@ -9,7 +9,8 @@ class Client {
         Displayer displayer = new Displayer();
         Generator generator = new Generator();
         SeniorityChecker seniorityChecker = new SeniorityChecker();
-        showEmpDetail(robin);
+        DetailShower detailShower = new DetailShower();
+        detailShower.showEmpDetail(robin);
 
         System.out.println("\n*******\n");
 

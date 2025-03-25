@@ -1,6 +1,6 @@
 package ex3;
 
-class AdvancedPrinter implements Printer {
+class AdvancedPrinter implements Printable,Sendable {
 	@Override
 	public void printDocument() {
 		System.out.println("The advanced printer prints a document.");
