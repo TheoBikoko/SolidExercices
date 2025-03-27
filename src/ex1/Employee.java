@@ -1,8 +1,8 @@
 package ex1;
 
 class Employee {
-    public String firstName, lastName, empId;
-    public double experienceInYears;
+    private String firstName, lastName, empId;
+    private double experienceInYears;
 
     public Employee(String firstName, String lastName, double experience) {
         this.firstName = firstName;

@@ -8,7 +8,6 @@ class Client {
     public static void main(String[] args) {
         List<Student> enrolledStudents = enrollStudents();
 
-        // Display all results.
         System.out.println("===Results:===");
         for (Student student : enrolledStudents) {
             System.out.println(student);
