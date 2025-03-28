@@ -1,6 +1,6 @@
 package ex4;
 
-class GuestUserPayment implements Payment {
+class GuestUserPayment extends Payment {
     String name;
 
     public GuestUserPayment() {
@@ -8,13 +8,7 @@ class GuestUserPayment implements Payment {
     }
 
     @Override
-    public void previousPaymentInfo() {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
     public void newPayment() {
         System.out.println("Processing " + name + "'s current payment request.");
-        //Some other code, if any
     }
 }

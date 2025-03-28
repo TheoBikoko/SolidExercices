@@ -1,16 +1,14 @@
 package ex5;
 
 class UserInterface {
-    private OracleDatabase oracleDatabase;
+EmployeeSaver employeeSaver;
 
-    public UserInterface() {
-        this.oracleDatabase = new OracleDatabase();
+    public UserInterface(EmployeeSaver employeeSaver) {
+        this.employeeSaver = employeeSaver;
     }
 
     public void saveEmployeeId(String empId) {
-        // Assuming that this is a valid data.
-        // So, storing it in the database.
-        oracleDatabase.saveEmpIdInDatabase(empId);
+        employeeSaver.saveEmpIdInDatabase(empId);
     }
 
 }

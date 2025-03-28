@@ -1,6 +1,6 @@
 package ex4;
 
-class RegisteredUserPayment implements Payment {
+class RegisteredUserPayment extends Payment implements PaymentHistory {
     String name;
 
     public RegisteredUserPayment(String userName) {
@@ -10,12 +10,10 @@ class RegisteredUserPayment implements Payment {
     @Override
     public void previousPaymentInfo() {
         System.out.println("Retrieving " + name + "'s last payment details.");
-        // Some other code, if any
     }
 
     @Override
     public void newPayment() {
         System.out.println("Processing " + name + "'s current payment request.");
-        // Some other code, if any
     }
 }
